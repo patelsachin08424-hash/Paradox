@@ -1,0 +1,441 @@
+/* =============================================================================
+   ONLINE HEALTHCARE MANAGEMENT SYSTEM - DESIGN SYSTEM & STYLESHEET
+   Aesthetics: Clinical HealthTech, Glassmorphism, Micro-interactions
+   ============================================================================= */
+
+:root {
+    --primary: #0d9488;
+    --primary-dark: #0f766e;
+    --primary-light: #ccfbf1;
+    --secondary: #0284c7;
+    --secondary-dark: #0369a1;
+    --accent: #f59e0b;
+    --danger: #ef4444;
+    --success: #10b981;
+    --bg-main: #f8fafc;
+    --card-bg: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+    --shadow-md: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 12px 30px -4px rgba(15, 23, 42, 0.12);
+    --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* -----------------------------------------------------------------------------
+   1. Brand Navigation & Top Bar
+   ----------------------------------------------------------------------------- */
+.top-bar {
+    background: #0f172a;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+}
+.top-bar a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: var(--transition);
+}
+.top-bar a:hover {
+    color: #ffffff;
+}
+
+.navbar-custom {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    padding: 0.85rem 0;
+}
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.45rem;
+    color: var(--primary-dark) !important;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.brand-pulse-icon {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.nav-link {
+    font-weight: 600;
+    color: #334155 !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--primary) !important;
+    background: rgba(13, 148, 136, 0.08);
+}
+
+/* -----------------------------------------------------------------------------
+   2. Hero Section
+   ----------------------------------------------------------------------------- */
+.hero-section {
+    position: relative;
+    padding: 6rem 0 5rem 0;
+    background: radial-gradient(circle at 10% 20%, rgba(13, 148, 136, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(2, 132, 199, 0.08) 0%, transparent 40%),
+                #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+}
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+.hero-title {
+    font-size: 3.25rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.2px;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+}
+.hero-title span {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-desc {
+    font-size: 1.15rem;
+    color: #475569;
+    max-width: 540px;
+    margin-bottom: 2rem;
+}
+
+.hero-stats-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-lg);
+}
+
+/* -----------------------------------------------------------------------------
+   3. Cards, Elevated Panels & Service Highlights
+   ----------------------------------------------------------------------------- */
+.feature-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2rem 1.75rem;
+    height: 100%;
+    transition: var(--transition);
+}
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(13, 148, 136, 0.3);
+}
+.feature-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.65rem;
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+}
+.icon-teal { background: #ccfbf1; color: var(--primary); }
+.icon-blue { background: #e0f2fe; color: var(--secondary); }
+.icon-rose { background: #ffe4e6; color: #e11d48; }
+.icon-amber { background: #fef3c7; color: #d97706; }
+.icon-indigo { background: #e0e7ff; color: #4f46e5; }
+.icon-emerald { background: #d1fae5; color: #059669; }
+
+.feature-card:hover .feature-icon-wrapper {
+    transform: scale(1.1);
+}
+
+/* -----------------------------------------------------------------------------
+   4. Doctor Profile Card
+   ----------------------------------------------------------------------------- */
+.doctor-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: var(--transition);
+    height: 100%;
+}
+.doctor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(13, 148, 136, 0.4);
+}
+.doctor-avatar-box {
+    height: 140px;
+    background: linear-gradient(135deg, #0f766e 0%, #0284c7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 3.5rem;
+}
+.doctor-avatar-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    margin-top: -45px;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+/* -----------------------------------------------------------------------------
+   5. Admin, Doctor & Patient App Shell / Sidebar
+   ----------------------------------------------------------------------------- */
+.portal-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background: var(--bg-main);
+}
+.portal-sidebar {
+    width: 280px;
+    background: #0f172a;
+    color: #f8fafc;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    border-right: 1px solid #1e293b;
+    z-index: 1000;
+}
+.portal-brand {
+    padding: 1.5rem 1.25rem;
+    border-bottom: 1px solid #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.portal-nav {
+    padding: 1.25rem 0.85rem;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+.portal-nav .nav-item {
+    margin-bottom: 0.25rem;
+}
+.portal-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #94a3b8;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: var(--transition);
+}
+.portal-link i {
+    font-size: 1.15rem;
+    width: 24px;
+}
+.portal-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+}
+.portal-link.active {
+    color: #ffffff;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
+}
+
+.portal-user-profile {
+    padding: 1.25rem;
+    background: #1e293b;
+    border-top: 1px solid #334155;
+}
+
+.portal-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+.portal-topbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.portal-main {
+    padding: 2rem 1.75rem;
+    flex-grow: 1;
+}
+
+/* Mobile responsive sidebar toggle */
+@media (max-width: 991.98px) {
+    .portal-sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -280px;
+    }
+    .portal-sidebar.show {
+        left: 0;
+    }
+}
+
+/* -----------------------------------------------------------------------------
+   6. Metrics / Counter Cards
+   ----------------------------------------------------------------------------- */
+.stat-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.stat-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: rgba(13, 148, 136, 0.3);
+}
+.stat-icon-pill {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+/* -----------------------------------------------------------------------------
+   7. Prescription Printable Format
+   ----------------------------------------------------------------------------- */
+.prescription-sheet {
+    background: #ffffff;
+    border: 2px solid #0f766e;
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+.prescription-header {
+    border-bottom: 2px solid #0f766e;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+.rx-symbol {
+    font-family: serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0f766e;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .portal-sidebar, .portal-topbar, .btn, .no-print {
+        display: none !important;
+    }
+    .prescription-sheet, .prescription-sheet * {
+        visibility: visible;
+    }
+    .prescription-sheet {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+/* -----------------------------------------------------------------------------
+   8. Buttons & Global Utility Refinements
+   ----------------------------------------------------------------------------- */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    font-weight: 600;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+.btn-secondary {
+    background-color: #475569;
+    border-color: #475569;
+}
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+    font-weight: 600;
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+}
+
+.table th {
+    font-weight: 700;
+    color: #475569;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: #f8fafc;
+}
+.table td {
+    vertical-align: middle;
+    font-size: 0.92rem;
+}
+
+.badge {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
